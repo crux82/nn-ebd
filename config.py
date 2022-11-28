@@ -19,18 +19,16 @@ from it.utils.data_utils import get_alfa_beta_values_list
 - MLP_EPOCHS: max epochs of the MLP
 """
 root_path = "C:/Users/luca/Documents/Tesi magistrale/ENN from git/enn"
-#SEED =  7763456 #5) 92578432 #4)400423 #3) 7763456 #2) 34204329 #1) 9647566
-FOLDS = 10
-DATA_AUGMENT, AUG_OPTIONS = True, [] #AUG_MUL_FACTOR, AUG_FEATURE, AUG_VALUE_FEATURE
 
 dataset_name = "compas"
-active_ef = ['sexTM']
+active_ef = ['raceTM']
 reduced_oracle_actived = False
 enable_early_stop, PATIENCE_VALUE,  = True, 5
 ETH_NET_EPOCHS, MLP_EPOCHS = 2, 2 #50, 50
 
 
-
+FOLDS = 10
+DATA_AUGMENT, AUG_OPTIONS = False, [] #AUG_MUL_FACTOR, AUG_FEATURE, AUG_VALUE_FEATURE
 ############################
 # Ethics configuration values
 ############################
