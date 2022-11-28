@@ -152,9 +152,11 @@ def main():
 
 In this case we have two executions, the first with seed "9647566" and the second with seed "34204329".
 
-Feel free to edit the Seeds or add others.
+Feel free to edit the SEEDS or add others lines.
 
 Finally, to execute the code, run main_run.py.
+
+The seeds used to produce the results in the paper are "9647566", "34204329", "7763456", "400423", "92578432".
 
 ```
 cd <main_directory_nn-ebd-main>
@@ -171,7 +173,6 @@ To reproduce our own results on COMPAS datasets, e.g. with the race truth-maker 
 
 ```
 root_path = SET ROOT PATH <C:/.../nn-ebd-main>
-SEED = 3274824
 
 dataset_name = "compas"  
 active_ef = ['raceTM']                
@@ -179,13 +180,15 @@ reduced_oracle_actived = True
 enable_early_stop, PATIENCE_VALUE, ETH_NET_EPOCHS = True, 5, 30
 MLP_EPOCHS = 100
 
+FOLDS = 10
+DATA_AUGMENT, AUG_OPTIONS = False, []
+
 values = [
  [0.1, 0.01, 0.01], [0.1, 0.1, 0.1], [0.1, 0.11, 0.11], [0.1, 0.12, 0.12], [0.1, 0.13, 0.13], [0.1, 0.14, 0.14], [0.1, 0.15, 0.15], [0.1, 0.16, 0.16], [0.1, 0.17, 0.17], [0.1, 0.2, 0.2],
  [0.3, 0.01, 0.01], [0.3, 0.1, 0.1], [0.3, 0.11, 0.11], [0.3, 0.12, 0.12], [0.3, 0.13, 0.13], [0.3, 0.14, 0.14], [0.3, 0.15, 0.15], [0.3, 0.16, 0.16], [0.3, 0.17, 0.17], [0.3, 0.2, 0.2],
  [0.5, 0.01, 0.01], [0.5, 0.1, 0.1], [0.5, 0.11, 0.11], [0.5, 0.12, 0.12], [0.5, 0.13, 0.13], [0.5, 0.14, 0.14], [0.5, 0.15, 0.15], [0.5, 0.16, 0.16], [0.5, 0.17, 0.17], [0.5, 0.2, 0.2]
 ]
 
-NUM_SAMPLES_LIME = 1000
 ```
 
 
@@ -202,6 +205,9 @@ reduced_oracle_actived = False
 enable_early_stop, PATIENCE_VALUE, ETH_NET_EPOCHS = False, 5, 1000
 MLP_EPOCHS = 100
 
+FOLDS = 10
+DATA_AUGMENT, AUG_OPTIONS = False, []
+
 values = [
   [0.1, 0.01, 0.01], [0.1, 0.05, 0.05], [0.1, 0.1, 0.1], [0.1, 0.2, 0.2], [0.1, 0.35, 0.35], [0.1, 0.4, 0.4], [0.1, 0.5, 0.5],
   [0.3, 0.01, 0.01], [0.3, 0.05, 0.05], [0.3, 0.1, 0.1], [0.3, 0.2, 0.2], [0.3, 0.35, 0.35], [0.3, 0.4, 0.4], [0.3, 0.5, 0.5],
@@ -209,7 +215,6 @@ values = [
   [1.0, 0.01, 0.01], [1.0, 0.05, 0.05], [1.0, 0.1, 0.1], [1.0, 0.2, 0.2], [1.0, 0.35, 0.35], [1.0, 0.4, 0.4], [1.0, 0.5, 0.5]
 ]
 
-NUM_SAMPLES_LIME = 1000
 ```
 
 
