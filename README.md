@@ -68,18 +68,18 @@ pip install -r requirements.txt
 	Navigate to the folder where you want to download the code, then
 
 	```
-	git clone http://git.revealsrl.it/squadrone/enn.git
+	git clone https://github.com/crux82/nn-ebd.git
 	```
 
 	OR
 
 	download from browser and then extract it with the following code or with an appropriate program
 	```
-	http://git.revealsrl.it/squadrone/enn/-/archive/main/enn-main.zip
+	https://github.com/crux82/nn-ebd/archive/refs/heads/main.zip
 	```
 	```
-	unzip enn-main.zip
-	rm enn-main.zip
+	unzip nn-ebd-main.zip
+	rm nn-ebd-main.zip
 	```
 
 2)
@@ -90,12 +90,12 @@ pip install -r requirements.txt
 
 Mac/linux
 ```
-export PYTHONPATH="${PYTHONPATH}:/path/to/EthicalNN/
+export PYTHONPATH="${PYTHONPATH}:/path/to/nn-ebd-main/
 ```
 
 Windows
 ```
-set PYTHONPATH=%PYTHONPATH%;C:\path\to\EthicalNN\
+set PYTHONPATH=%PYTHONPATH%;C:\path\to\nn-ebd-main\
 ```
 
 
@@ -104,7 +104,7 @@ set PYTHONPATH=%PYTHONPATH%;C:\path\to\EthicalNN\
 This is the list of configuration parameters, with their explanation, found in the configuration file "config.py", located in the root directory. Remember to modify them appropriately before executing the code:
 
 
-* `root_path`: Parameter for setting the path to the project's root directory, i.e. the 'RAI' directory. It must be written like this `"C:/Users/.../RAI"`.
+* `root_path`: Parameter for setting the path to the project's root directory, i.e. the 'nn-ebd-main' directory. It must be written like this `"C:/Users/.../nn-ebd-main"`.
 * `SEED`: Parameter used to set the seed of the experiment, represented by an integer. Its purpose is to make reproducibility of results possible.
 * `dataset_name`: Parameter for setting the dataset to be used during the experiment. The following values are allowed: 'german_credit', 'compas', 'adult', 'credit_card', 'law_school'.
 * `active_ef`: Parameter for choosing the truth-makers that make up the ethical ontology. It must be a list consisting of the names of one or more truth-makers, as indicated below:
@@ -137,7 +137,7 @@ This is the list of configuration parameters, with their explanation, found in t
 After appropriately modifying the parameters in the config.py file, to start an experiment run the file 'run_ethics_network.py' in the root directory.
 
 ```
-cd <main_directory_RAI>
+cd <main_directory_nn-ebd-main>
 python run_ethics_network.py
 ```
 
@@ -150,7 +150,7 @@ To reproduce our own results on COMPAS datasets, e.g. with the race truth-maker 
 
 
 ```
-root_path = SET ROOT PATH <C:/.../RAI>
+root_path = SET ROOT PATH <C:/.../nn-ebd-main>
 SEED = 3274824
 
 dataset_name = "compas"  
@@ -173,7 +173,7 @@ In order to reproduce our same results on the German Credit dataset, with SEED =
 
 
 ```
-root_path = "C:/.../RAI"
+root_path = "C:/.../nn-ebd-main"
 SEED = 1
 
 dataset_name = "german_credit"  
@@ -219,7 +219,7 @@ The results of the ethics network can be found in
 
 
 ```
-C:\...\RAI\resources\<DATASET_NAME>\data\enriched_data\<EXPERIMENT_NAME>\results\all_metrics.csv
+C:\...\nn-ebd-main\resources\<DATASET_NAME>\data\enriched_data\<EXPERIMENT_NAME>\results\all_metrics.csv
 ```
 
 
@@ -227,7 +227,7 @@ The results of the MLP network can be found in
 
 
 ```
-C:\...\RAI\resources\<DATASET_NAME>\data\enriched_data\<EXPERIMENT_NAME>\results\baseline_metrics.csv
+C:\...\nn-ebd-main\resources\<DATASET_NAME>\data\enriched_data\<EXPERIMENT_NAME>\results\baseline_metrics.csv
 ```
 
 ## Results obtained in previous executions
