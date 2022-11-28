@@ -244,6 +244,7 @@ Luca Squadrone
 # Citation
 
 To cite the paper, please use the following:
+```
 @inproceedings{squadrone-etal-2022-enn,
     title = "Ethics by Design for Intelligent and Sustainable Adaptive Systems",
     author = "Squadrone, Luca  and
@@ -257,6 +258,7 @@ To cite the paper, please use the following:
     url = "",
     pages = ""
 }
+```
 
 
 # Acknowledgements
