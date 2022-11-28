@@ -231,7 +231,7 @@ C:\...\nn-ebd-main\resources\<DATASET_NAME>\data\enriched_data\<EXPERIMENT_NAME>
 ```
 
 ## Results obtained in previous executions
-Results that have been obtained from previous executions are available at <!--[this link](https://drive.google.com/drive/folders/1cQ6mNcfzGXGWU1i19MWJ6Mqbp8mx-JyL?usp=sharing "this link"). All results show the SEED used in the folder name, so that they can be reproduced.-->
+Results that have been obtained from previous executions will be available in the paper "Ethics by Design for Intelligent and Sustainable Adaptive Systems" once it has been published.
 
 
 # How truth-makers are written
@@ -240,6 +240,23 @@ Results that have been obtained from previous executions are available at <!--[t
 # Authors
 
 Luca Squadrone
+
+# Citation
+
+To cite the paper, please use the following:
+@inproceedings{squadrone-etal-2022-enn,
+    title = "Ethics by Design for Intelligent and Sustainable Adaptive Systems",
+    author = "Squadrone, Luca  and
+      Croce, Danilo  and
+      Basili, Roberto",
+    booktitle = "",
+    month = nov,
+    year = "2022",
+    address = "Online",
+    publisher = "Associazione Italiana per l'Intelligenza Artificiale",
+    url = "",
+    pages = ""
+}
 
 
 # Acknowledgements
