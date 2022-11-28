@@ -99,6 +99,11 @@ set PYTHONPATH=%PYTHONPATH%;C:\path\to\nn-ebd-main\
 ```
 
 
+## Resources
+
+In the *resources* folder there are several subfolders, one for each dataset. Within each one, you must extract the contents of the gzip file.
+
+
 ## The configuration parameters
 
 This is the list of configuration parameters, with their explanation, found in the configuration file "config.py", located in the root directory. Remember to modify them appropriately before executing the code:
