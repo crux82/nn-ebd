@@ -105,7 +105,7 @@ This is the list of configuration parameters, with their explanation, found in t
 
 
 * `root_path`: Parameter for setting the path to the project's root directory, i.e. the 'nn-ebd-main' directory. It must be written like this `"C:/Users/.../nn-ebd-main"`.
-* `SEED`: Parameter used to set the seed of the experiment, represented by an integer. Its purpose is to make reproducibility of results possible.
+<!--* `SEED`: Parameter used to set the seed of the experiment, represented by an integer. Its purpose is to make reproducibility of results possible.-->
 * `dataset_name`: Parameter for setting the dataset to be used during the experiment. The following values are allowed: 'german_credit', 'compas', 'adult', 'credit_card', 'law_school'.
 * `active_ef`: Parameter for choosing the truth-makers that make up the ethical ontology. It must be a list consisting of the names of one or more truth-makers, as indicated below:
 	 - For Compas you can choose between 'raceTM', 'ageTM', 'sexTM', 'mildTM' (a neutral TM);
@@ -114,7 +114,7 @@ This is the list of configuration parameters, with their explanation, found in t
 	 - For Default credit cards 'sexTM' and 'mildTM' are available;
 	 - For Law school dataset you can choose between 'sexTM', 'raceLawSchTM', 'mildTM'.
 
-* `reduced_oracle_actived`: Parameter enabling the use of the unbiased dataset for the test phase. This configuration parameter only takes effect for experiments on the COMPAS dataset and is ignored in other cases. In other words it is a Boolean variable used ONLY FOR COMPAS to delete some biased instances concerning African-Americans.
+* `reduced_oracle_actived`: Parameter enabling the use of the unbiased dataset for the test phase. This configuration parameter only takes effect for experiments on the COMPAS dataset and is ignored in other cases. In other words it is a Boolean variable used ONLY FOR COMPAS to delete some biased instances concerning African-Americans. The default value is False.
 * `enable_early_stop`: Parameter enabling early-stop on the ethical network.
 * `PATIENCE_VALUE`: Early-stop patience value. Determines the maximum number of epochs before the early-stop mechanism stops if it does not find a better model than the previous ones, evaluated in terms of accuracy on the validation set.
 * `ETH_NET_EPOCHS`: Sets the number of maximum epochs of ethical network training (or actual epochs if early-stop is not enabled)
@@ -134,11 +134,31 @@ This is the list of configuration parameters, with their explanation, found in t
 
 ## How to perform an experiment
 
-After appropriately modifying the parameters in the config.py file, to start an experiment run the file 'run_ethics_network.py' in the root directory.
+After appropriately modifying the parameters in the config.py file, before starting an experiment, we advise you to set the seed.
+Seed is represented by an integer and its purpose is to make reproducibility of results possible.
+
+The file to be modified is 'main_run.py' in the root directory.
+
+This is an example of the contents of the file.
+
+```
+def main():
+
+    multi_config_exec(9647566)
+    multi_config_exec(34204329)
+	#...
+	#...you can add as many runs as you like
+```
+
+In this case we have two executions, the first with seed "9647566" and the second with seed "34204329".
+
+Feel free to edit the Seeds or add others.
+
+Finally, to execute the code, run main_run.py.
 
 ```
 cd <main_directory_nn-ebd-main>
-python run_ethics_network.py
+python main_run.py
 ```
 
 The configuration used for the experiment can always be changed in the config.py file before an experiment.
