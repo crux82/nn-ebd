@@ -260,7 +260,37 @@ Results that have been obtained from previous executions will be available in th
 
 
 # How truth-makers are written
-...
+In the ProPublica case, as the COMPAS dataset suggests, African Americans are more often mislabeled as being at higher risk than Caucasians. An ethical principle that may be used against this potentially unfair situation could be expressed as 
+
+*Safeguard the minority of African Americans from discriminatory classification can be achieved by avoiding severe decisions when identifying them as repeat offenders.*
+
+This principle suggests a constraint favoring situations in which it is particularly *beneficial* to protect a minority, such as African Americans. 
+
+At the same time, decisions about African Americans being repeat offenders are also risky, because of the community's potential social characterization. In fact, the COMPAS dataset contains the variable *race* (expressing if the individual is African American or Caucasian), which seems to suggest that African Americans are positively correlated with the *repeat offender class*  on average: however, race should not be linked to such bias and the following principle can be used to counterbalance this trend: *We expect there is a* **substantial benefit** *and* **low risk** *in classifying an African American as a non-repeat offender*  
+
+Rules used to summarize the above principles sentences can be derived for *NON-Repeat offender* decisions:
+- the **Benefit** in categorizing an African American as a \textsc{NON-repeat offender} is **high**;
+- the **Risk** in classifying an African American as a *NON-repeat offender* is **low**;
+
+as well as *Repeat offender* decisions:
+- the **Benefit** in classifying an African American as a repeat offender is **very low**;
+- the **Risk** in classifying an African American as a repeat offender is **very high**.
+
+
+The above rules are typical examples of truth-makers, as constraints on the decisions about recidivism based on the *race* feature. Notice that the adjective **low**, **very high** or **high** are vague but can be easily translated into fuzzy sets, as subjective models of the two meta-variables expressing the **Risk** and **Benefit** of any individual decision, as shown below.
+
+```
+if race == "African-American":
+	TMarray[index][0] = cat_value_dict['high']  # benefit in classifying as NOT a repeat offender (African-American)
+	TMarray[index][1] = cat_value_dict['low']   # risk in classifying as NOT a repeat offender (African-American)
+	TMarray[index][2] = cat_value_dict['very low']   # recidivist benefit (African-American)
+	TMarray[index][3] = cat_value_dict['very high']  # recidivist risk (African-American)
+else:
+	TMarray[index][0] = cat_value_dict['mild']   # benefit of classifying as NOT a repeat offender (others)
+	TMarray[index][1] = cat_value_dict['mild']   # risk in classifying as NOT a repeat offender (others)
+	TMarray[index][2] = cat_value_dict['mild']   # recidivist benefit (others)
+	TMarray[index][3] = cat_value_dict['mild']   # recidivist risk (others)
+```
 
 # Authors
 
