@@ -18,7 +18,7 @@ from it.utils.data_utils import get_alfa_beta_values_list
 - ETH_NET_EPOCHS: max epochs of the ethical neural network
 - MLP_EPOCHS: max epochs of the MLP
 """
-root_path = "C:/Users/luca/Documents/Tesi magistrale/ENN from git/enn"
+root_path = "C:/.../nn-ebd"
 
 dataset_name = "compas"
 active_ef = ['raceTM']

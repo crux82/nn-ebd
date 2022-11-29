@@ -274,7 +274,7 @@ This principle suggests a constraint favoring situations in which it is particul
 At the same time, decisions about African Americans being repeat offenders are also risky, because of the community's potential social characterization. In fact, the COMPAS dataset contains the variable *race* (expressing if the individual is African American or Caucasian), which seems to suggest that African Americans are positively correlated with the *repeat offender class*  on average: however, race should not be linked to such bias and the following principle can be used to counterbalance this trend: *We expect there is a* **substantial benefit** *and* **low risk** *in classifying an African American as a non-repeat offender*  
 
 Rules used to summarize the above principles sentences can be derived for *NON-Repeat offender* decisions:
-- the **Benefit** in categorizing an African American as a \textsc{NON-repeat offender} is **high**;
+- the **Benefit** in categorizing an African American as a *NON-repeat offender* is **high**;
 - the **Risk** in classifying an African American as a *NON-repeat offender* is **low**;
 
 as well as *Repeat offender* decisions:
