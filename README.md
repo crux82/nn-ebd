@@ -305,18 +305,27 @@ Luca Squadrone
 
 To cite the paper, please use the following:
 ```
-@inproceedings{squadrone-etal-2022-enn,
-    title = "Ethics by Design for Intelligent and Sustainable Adaptive Systems",
-    author = "Squadrone, Luca  and
-      Croce, Danilo  and
-      Basili, Roberto",
-    booktitle = "",
-    month = nov,
-    year = "2022",
-    address = "Online",
-    publisher = "Associazione Italiana per l'Intelligenza Artificiale",
-    url = "",
-    pages = ""
+@inproceedings{DBLP:conf/aiia/SquadroneCB22,
+  author    = {Luca Squadrone and
+               Danilo Croce and
+               Roberto Basili},
+  editor    = {Agostino Dovier and
+               Angelo Montanari and
+               Andrea Orlandini},
+  title     = {Ethics by Design for Intelligent and Sustainable Adaptive Systems},
+  booktitle = {AIxIA 2022 - Advances in Artificial Intelligence - XXIst International
+               Conference of the Italian Association for Artificial Intelligence,
+               AIxIA 2022, Udine, Italy, November 28 - December 2, 2022, Proceedings},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13796},
+  pages     = {154--167},
+  publisher = {Springer},
+  year      = {2022},
+  url       = {https://doi.org/10.1007/978-3-031-27181-6\_11},
+  doi       = {10.1007/978-3-031-27181-6\_11},
+  timestamp = {Tue, 14 Mar 2023 08:56:21 +0100},
+  biburl    = {https://dblp.org/rec/conf/aiia/SquadroneCB22.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
 
