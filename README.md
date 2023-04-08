@@ -1,4 +1,4 @@
-# EthicalNN: Ethical Neural Network
+# EthicalNN: Ethics by Design for Intelligent and Sustainable Adaptive Systems
 
 
 ## Introduction
